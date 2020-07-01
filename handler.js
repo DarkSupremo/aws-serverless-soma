@@ -4,11 +4,11 @@ module.exports.soma = async event => {
     let a = 0;
     let b = 0;
     if (event.queryStringParameters && event.queryStringParameters.a) {
-        a = parseInt(event.queryStringParameters.a) || 0;
+        a = parseFloat(event.queryStringParameters.a) || 0;
     }
 
     if (event.queryStringParameters && event.queryStringParameters.b) {
-        b = parseInt(event.queryStringParameters.b) || 0;
+        b = parseFloat(event.queryStringParameters.b) || 0;
     }
 
     return {
